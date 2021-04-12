@@ -21,7 +21,7 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nama</th>
-                <th scope="col">Email</th>
+                <th scope="col">Username</th>
                 <th scope="col">No telp</th>
                 <th scope="col">Akses</th>
                 <th scope="col">Action</th>
@@ -32,7 +32,7 @@
               <tr>
                 <th scope="row">{{ ++$i }}</th>
                 <td>{{ $item->name }}</td>
-                <td>{{ $item->email }}</td>
+                <td>{{ $item->username }}</td>
                 <td>{{ $item->telpon }}</td>
                 <td>{{ $item->akses }}</td>
                 <td>

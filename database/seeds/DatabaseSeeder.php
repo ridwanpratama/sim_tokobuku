@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         DB::table('users')->insert([
             'name' => 'Admin',
-            'email' => 'admin@gmail.com',
+            'username' => 'admin',
             'password' => Hash::make('12345'),
             'akses' => 'Admin',
             'alamat' => 'Cimande Caringin Bogor',
@@ -24,11 +24,21 @@ class DatabaseSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => 'Manager',
-            'email' => 'manager@gmail.com',
+            'username' => 'manager',
             'password' => Hash::make('12345'),
             'akses' => 'Manager',
             'alamat' => 'Cimande Bogor',
             'telpon' => '081321212',
+            'status' => 'Aktif',
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Manager',
+            'username' => 'kasir',
+            'password' => Hash::make('12345'),
+            'akses' => 'Kasir',
+            'alamat' => 'Bogor Indonesia',
+            'telpon' => '0889212131',
             'status' => 'Aktif',
         ]);
     }
