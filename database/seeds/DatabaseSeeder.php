@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'Manager',
+            'name' => 'Kasir',
             'username' => 'kasir',
             'password' => Hash::make('12345'),
             'akses' => 'Kasir',
