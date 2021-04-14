@@ -57,14 +57,14 @@ class BukuController extends Controller
 
     public function edit($id)
     {
-        $buku = Buku::find($id);
+        $buku = Buku::findorFail($id);
         return view('admin.buku.edit',compact('buku'));
     }
 
     public function update(Request $request, $id)
     {
         $this->_validation($request);
-        $buku = Buku::find($id);
+        $buku = Buku::findorFail($id);
         $buku->update($request->all());
         return redirect('buku');
     }

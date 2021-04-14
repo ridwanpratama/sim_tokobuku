@@ -55,14 +55,14 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        $user = User::find($id);
+        $user = User::findorFail($id);
         return view('manager.user.edit',compact('user'));
     }
 
     public function update(Request $request, $id)
     {
         $this->_validation($request);
-        $user = User::find($id);
+        $user = User::findorFail($id);
         $request->merge(['password'=>bcrypt($request->password)]);
         $user->update($request->all());
         return redirect('user');

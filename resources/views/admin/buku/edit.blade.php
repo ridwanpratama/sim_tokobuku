@@ -4,7 +4,6 @@
     <div class="card">
         <div class="card-header">
             {{ __('Edit Buku') }}
-            <a class="btn btn-info btn-sm text-white float-right" href="#">Create</a>
         </div>
         <div class="card-body">
             <form action="{{ route('buku.update', $buku->id) }}" method="POST">

@@ -27,6 +27,7 @@ Route::middleware(['auth', 'akses:Manager'])->group(function () {
 
 Route::middleware(['auth', 'akses:Admin'])->group(function () {
     Route::resource('/buku', 'Admin\BukuController');
+    Route::resource('/distributor', 'Admin\DistributorController');
 });
 
 Route::middleware(['auth', 'akses:Kasir'])->group(function () {

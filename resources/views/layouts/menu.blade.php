@@ -10,7 +10,7 @@
     @endif
 
     @if (auth()->user()->akses=="Admin")
-    <a class="list-group-item" href="">Data Distributor</a>
+    <a class="list-group-item" href="{{ route('distributor.index') }}">Data Distributor</a>
     @endif
 
     @if (auth()->user()->akses=="Kasir")
